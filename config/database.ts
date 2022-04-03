@@ -22,7 +22,7 @@ const databaseConfig: DatabaseConfig = {
   */
   // connection: Env.get('DB_CONNECTION'),
   // connection: Application.inDev ? 'pg' : 'mysql',
-  connection: Application.inProduction ? 'pg' : 'mysql',
+  connection: Application.inProduction ? 'pg' : 'pg',
 
   connections: {
     /*

@@ -33,7 +33,7 @@ export default class BookingsController {
   }
 
   public async store({ request, response, params, auth }: HttpContextContract) {
-    let payload = await request.validate(BookingCreateValidator);
+    await request.validate(BookingCreateValidator);
     try {
       let id: number = parseInt(params.field_id);
       let field = await Field.findByOrFail("id", id);
@@ -42,9 +42,9 @@ export default class BookingsController {
         let booking = new Booking();
         booking.fieldId = request.input("field_id", id);
         booking.userId = request.input("user_id", user.id);
-        booking.date_booking = payload.date_booking;
-        booking.time_start = payload.time_start;
-        booking.time_end = payload.time_end;
+        booking.date_booking = request.input("date_booking");
+        booking.time_start = request.input("time_start");
+        booking.time_end = request.input("time_end");
 
         user.related("schedules").save(booking);
 
