@@ -1,0 +1,46 @@
+/api/v1/venue/{venue_id}/fields:
+   get:
+     tags:
+       - Field
+     description: List semua lapangan yang ada di venue tertentu
+     parameters:
+      - in : path
+        name : venue_id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil get data lapangan yang ada di venue tertentu
+       401:
+         description: Akses ditolak
+       404:
+         description: Venue tidak ditemukan
+
+/api/v1/venue/{venue_id}/fields/{id}:
+   get:
+     tags:
+       - Field
+     description: detail lapangan yang ada di venue tertentu berdasarkan venue_id dan id nya dan juga detail bookingnya
+     parameters:
+      - in : path
+        name : venue_id
+        schema:
+          type: integer
+        required: true
+      - in : path
+        name : id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: Berhasil ambil detail data lapangan berdasarkan id nya
+       401:
+         description: Akses ditolak
+       404:
+         description: lapangan tidak ditemukan

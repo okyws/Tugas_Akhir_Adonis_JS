@@ -11,6 +11,26 @@ import Venue from "App/Models/Venue";
 import Booking from "App/Models/Booking";
 
 export default class Field extends BaseModel {
+/**
+ * @swagger
+ * components:
+ *    schemas:
+ *      Field:
+ *        type: object
+ *        properties:
+ *          id:
+ *            type: integer
+ *          name:
+ *            type: string
+ *          type:
+ *            type: string
+ *          venue_id:
+ *            type: number
+ *        required:
+ *          - name
+ *          - type
+ *          - venue_id
+ */
   @column({ isPrimary: true })
   public id: number;
 

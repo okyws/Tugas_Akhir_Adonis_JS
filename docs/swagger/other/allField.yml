@@ -1,0 +1,20 @@
+/api/v1/fields:
+   get:
+     tags:
+       - Field
+     description: List semua lapangan yang ada dari semua venue
+    #  parameters:
+    #   - in : path
+    #     name : venue_id
+    #     schema:
+    #       type: integer
+    #     required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil get data semua lapangan
+       401:
+         description: Akses ditolak
+       404:
+         description: Lapangan tidak ditemukan

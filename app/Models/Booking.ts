@@ -11,6 +11,32 @@ import Field from "App/Models/Field";
 import User from "App/Models/User";
 
 export default class Booking extends BaseModel {
+/**
+ * @swagger
+ * components:
+ *    schemas:
+ *      Booking:
+ *        type: object
+ *        properties:
+ *          id:
+ *            type: integer
+ *          field_id:
+ *            type: number
+ *          user_id:
+ *            type: number
+ *          date_booking:
+ *            type: DateTime
+ *          time_start:
+ *            type: DateTime         
+ *          time_end:
+ *            type: DateTime
+ *        required:
+ *          - field_id
+ *          - user_id
+ *          - date_booking
+ *          - time_start
+ *          - time_end
+ */
   public serializeExtras = true;
 
   @column({ isPrimary: true })

@@ -12,7 +12,7 @@ export default {
 		definition: {
 			openapi: '3.0.0',
 			info: {
-				title: 'Application Main Bersama',
+				title: 'API - Aplikasi Main Bersama',
 				version: '1.0.0',
 				description: 'Aplikasi Main bersama untuk booking venue'
 			},

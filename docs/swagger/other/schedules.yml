@@ -1,0 +1,20 @@
+/api/v1/schedules:
+   get:
+     tags:
+       - Booking
+     description: Menampilkan list booking yang diikuti oleh user yang sedang melakukan login
+    #  parameters:
+    #   - in : path
+    #     name : venue_id
+    #     schema:
+    #       type: integer
+    #     required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil get schedules
+       401:
+         description: Akses ditolak
+       404:
+         description: schedules tidak ditemukan

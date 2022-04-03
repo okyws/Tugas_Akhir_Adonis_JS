@@ -1,0 +1,31 @@
+/api/v1/venue/:
+   post:
+     tags:
+       - Venue
+     description: Menambah venue baru
+     requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:    
+                  type: string
+                address:
+                  type: string
+                phone:
+                  type: string
+              required:
+                - name
+                - address
+                - phone
+     security: 
+        - bearerAuth: []
+     responses:
+       201:
+         description: Berhasil menambah venue!
+       401:
+         description: Akses ditolak
+       422:
+         description: Terdapat kesalahan input

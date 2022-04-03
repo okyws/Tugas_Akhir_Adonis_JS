@@ -36,7 +36,7 @@ export default class FieldsController {
         });
       }
     } catch (error) {
-      response.badRequest({
+      response.notFound({
         status: "failed",
         message: "gagal memuat data Arena, Arena tidak ditemukan!",
         erorrs: error.message,
@@ -63,9 +63,9 @@ export default class FieldsController {
         });
       }
     } catch (error) {
-      response.unprocessableEntity({
+      response.notFound({
         status: "failed",
-        message: "gagal membuat Arena!",
+        message: "gagal membuat Arena, venue tidak ditemukan!",
         erorrs: error.message,
       });
     }

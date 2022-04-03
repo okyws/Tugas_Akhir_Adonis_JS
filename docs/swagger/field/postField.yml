@@ -1,0 +1,36 @@
+/api/v1/venue/{venue_id}/fields:
+   post:
+     tags:
+       - Field
+     description: Mendaftarkan lapangan baru
+     parameters:
+      - in : path
+        name : venue_id
+        schema:
+          type: integer
+        required: true
+     requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:    
+                  type: string
+                type:
+                  type: string
+              required:
+                - name
+                - type
+     security: 
+        - bearerAuth: []
+     responses:
+       201:
+         description: berhasil menambahkan data lapangan baru
+       401:
+         description: Akses ditolak
+       404:
+         description: venue tidak ditemukan
+       422:
+         description: Terdapat kesalahan input

@@ -1,0 +1,39 @@
+/api/v1/fields/{field_id}/booking:
+   post:
+     tags:
+       - Booking
+     description: Mendaftarkan Booking baru ke suatu lapangan
+     parameters:
+      - in : path
+        name : field_id
+        schema:
+          type: integer
+        required: true
+     requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                date_booking:
+                  type: DateTime
+                time_start:
+                  type: DateTime
+                time_end:
+                  type: DateTime
+              required:
+                - date_booking
+                - time_start
+                - time_end
+     security: 
+        - bearerAuth: []
+     responses:
+       201:
+         description: berhasil menambahkan data booking baru
+       401:
+         description: Akses ditolak
+       404:
+         description: lapangan tidak ditemukan
+       422:
+         description: Terdapat kesalahan input

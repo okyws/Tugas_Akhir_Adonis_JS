@@ -79,8 +79,8 @@ export default class BookingCreateValidator {
     "time_start.date.format": "Tanggal harus sesuai format yyyy-MM-dd HH:mm:ss",
     "time_start.beforeField":
       "Waktu main tidak boleh sama dengan waktu selesai",
-    "time_start.after": "Waktu Main minimal esok hari sebelum!",
-    "time_end.after": "Waktu selesai minimal esok hari sebelum!",
+    "time_start.after": "Waktu Main minimal esok hari atau sesudah hari ini!",
+    "time_end.after": "Waktu selesai minimal esok hari atau sesudah hari ini!",
     "time_end.required":
       'Waktu berakhir harus diisi! (format: "yyyy-MM-dd HH:mm:ss")',
     "time_end.date.format": "Tanggal harus sesuai format yyyy-MM-dd HH:mm:ss",

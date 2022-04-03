@@ -24,7 +24,7 @@ export default class BookingsController {
         });
       }
     } catch (error) {
-      response.badRequest({
+      response.notFound({
         status: "failed",
         message: "Gagal memuat data Booking, lapangan tidak ditemukan!",
         erorrs: error.message,

@@ -1,0 +1,21 @@
+/api/v1/venue/{id}:
+   delete:
+     tags:
+       - Venue
+     description: Menghapus data venue berdasarkan id nya
+     parameters:
+      - in : path
+        name : id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil hapus data venue dengan id
+       401:
+         description: Akses ditolak
+       404:
+         description: venue tidak ditemukan
+

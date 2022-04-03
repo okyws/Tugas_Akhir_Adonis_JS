@@ -1,0 +1,41 @@
+/api/v1/venue/{venue_id}/fields/{id}:
+   put:
+     tags:
+       - Field
+     description: Mengedit data lapangan
+     parameters:
+      - in : path
+        name : venue_id
+        schema:
+          type: integer
+        required: true
+      - in : path
+        name : id
+        schema:
+          type: integer
+        required: true
+     requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:    
+                  type: string
+                type:
+                  type: string
+              required:
+                - name
+                - type
+     security: 
+        - bearerAuth: []
+     responses:
+       200:
+         description: berhasil mengubah data lapangan
+       401:
+         description: Akses ditolak
+       404:
+         description: venue tidak ditemukan
+       422:
+         description: Terdapat kesalahan input

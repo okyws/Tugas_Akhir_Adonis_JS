@@ -7,7 +7,7 @@ export default class User {
     if(role == 'user') {
       await next()
     } else {
-      return response.unauthorized({ message: 'Hanya user yang bisa booking' })
+      return response.unauthorized({ message: 'Hanya user yang bisa akses' })
     }
   }
 }

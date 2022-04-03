@@ -1,0 +1,33 @@
+/api/v1/register:
+   post:
+     tags:
+       - Auth
+     description: Melakukan pendaftaran user baru dengan memasukan data name, email, dan password. Aplikasi mengirimkan kode OTP ke email user pendaftar.
+     requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:         
+                  type: string
+                email:    
+                  type: string
+                password:
+                  type: string
+                password_confirmation: 
+                  type: string
+                role:
+                  type: string
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+                - role
+     responses:
+       201:
+         description: Register berhasil, silahkan lanjutkan Verifikasi OTP
+       422:
+          description: Terdapat kesalahan input

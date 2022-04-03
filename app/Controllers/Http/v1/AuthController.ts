@@ -24,7 +24,7 @@ export default class AuthController {
 
       await Mail.send((message) => {
         message
-          .from("oky@adonis.com")
+          .from("oky@sanberdev.com")
           .to(data.email)
           .subject("Welcome to Booking API")
           .htmlView("mail/otp_verification", {

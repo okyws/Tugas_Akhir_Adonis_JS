@@ -1,0 +1,34 @@
+/api/v1/venue:
+   get:
+     tags:
+       - Venue
+     description: List semua venue yang ada
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: Berhasil mengambil semua data venue
+       401:
+         description: Akses ditolak
+
+/api/v1/venue/{id}:
+   get:
+     tags:
+       - Venue
+     description: List semua lapangan yang ada di venue tertentu dan list booking lapangan yang ada di venue dengan tanggal saat ini
+     parameters:
+      - in : path
+        name : id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil get data venue by id
+       401:
+         description: Akses ditolak
+       404:
+         description: venue tidak ditemukan
+

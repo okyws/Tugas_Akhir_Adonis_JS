@@ -1,0 +1,46 @@
+/api/v1/fields/{field_id}/booking:
+   get:
+     tags:
+       - Booking
+     description: List booking yang ada di lapangan dengan id tertentu
+     parameters:
+      - in : path
+        name : field_id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: berhasil get data booking yang ada di lapangan tertentu
+       401:
+         description: Akses ditolak
+       404:
+         description: Lapangan tidak ditemukan
+
+/api/v1/fields/{field_id}/booking/{id}:
+   get:
+     tags:
+       - Booking
+     description: detail booking yang ada di lapangan tertentu berdasarkan id lapangan dan id bookingnya
+     parameters:
+      - in : path
+        name : field_id
+        schema:
+          type: integer
+        required: true
+      - in : path
+        name : id
+        schema:
+          type: integer
+        required: true
+     security: 
+      - bearerAuth: []
+     responses:
+       200:
+         description: Berhasil ambil detail data booking berdasarkan id nya yang ada di lapangan tertentu
+       401:
+         description: Akses ditolak
+       404:
+         description: lapangan tidak ditemukan
