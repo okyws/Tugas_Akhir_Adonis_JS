@@ -17,11 +17,11 @@
               type: object
               properties:
                 date_booking:
-                  type: DateTime
+                  type: dateTime
                 time_start:
-                  type: DateTime
+                  type: dateTime
                 time_end:
-                  type: DateTime
+                  type: dateTime
               required:
                 - date_booking
                 - time_start
