@@ -25,11 +25,11 @@ export default class Booking extends BaseModel {
  *          user_id:
  *            type: number
  *          date_booking:
- *            type: DateTime
+ *            type: dateTime
  *          time_start:
- *            type: DateTime         
+ *            type: dateTime         
  *          time_end:
- *            type: DateTime
+ *            type: dateTime
  *        required:
  *          - field_id
  *          - user_id
