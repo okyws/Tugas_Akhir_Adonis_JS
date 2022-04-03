@@ -33,6 +33,6 @@ export default {
 		],
 		basePath: '/api/v1/'
 	},
-	mode: process.env.NODE_ENV === 'production' ? 'PRODUCTION' : 'RUNTIME',
+	mode: process.env.NODE_ENV === 'production' ? 'RUNTIME' : 'RUNTIME',
   specFilePath: 'docs/swagger.json'
 } as SwaggerConfig

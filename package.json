@@ -7,9 +7,6 @@
     "start": "node ace serve --watch",
     "start:prod": "node ./build/server.js"
   },
-  "engines": {
-    "node": "14.16.1"
-  },
   "devDependencies": {
     "@adonisjs/assembler": "^5.4.2",
     "adonis-preset-ts": "^2.1.0",
