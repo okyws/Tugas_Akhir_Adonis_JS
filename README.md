@@ -75,6 +75,6 @@ heroku: https://final-jcc-mabar.herokuapp.com/docs/index.html
   isVerify: false
   
  
-#Preview
+# Preview
 ![Preview](https://github.com/okyws/Tugas_Akhir_Adonis_JS/blob/master/screencapture-final-jcc-mabar-herokuapp-docs-index-html-2022-10-11-11_53_31.png
  "Preview") 
